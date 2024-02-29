@@ -1,5 +1,181 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "name" : "suites",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Cadastro",
+    "children" : [ {
+      "name" : "Test 01 - Verificar se é possível realizar um cadastro de usuário com informações válidas",
+      "uid" : "9724654fa94d6fb3",
+      "parentUid" : "de2ab1b6520747037939cd4a650da7de",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248767493,
+        "stop" : 1709248767561,
+        "duration" : 68
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Test 02 - Verificar se é possível realizar um cadastro de usuário com informações inválidas",
+      "uid" : "2640fec02b6d764",
+      "parentUid" : "de2ab1b6520747037939cd4a650da7de",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248767571,
+        "stop" : 1709248767608,
+        "duration" : 37
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "de2ab1b6520747037939cd4a650da7de"
+  }, {
+    "name" : "Login",
+    "children" : [ {
+      "name" : "Test 01 - Verifique se é possível fazer login com um usuário existente fornecendo o email e senha corretos",
+      "uid" : "973a2dbfd7bf3b5b",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248775678,
+        "stop" : 1709248775749,
+        "duration" : 71
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Test 02 - Verifique se a página redireciona corretamente após o login bem-sucedido",
+      "uid" : "d51be09e3cb5e618",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248775759,
+        "stop" : 1709248775821,
+        "duration" : 62
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1a85855463aca3ea10b8fe0fcb3372b8"
+  }, {
+    "name" : "Logout",
+    "children" : [ {
+      "name" : "Test 01 - Verifique se é possível fazer logout corretamente",
+      "uid" : "7783cda69601da89",
+      "parentUid" : "7889adc551fb943d344581d130caec92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248782847,
+        "stop" : 1709248782911,
+        "duration" : 64
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Test 02 - Verifique se não é possível fazer logout",
+      "uid" : "2bae5def5a72478f",
+      "parentUid" : "7889adc551fb943d344581d130caec92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248782918,
+        "stop" : 1709248782959,
+        "duration" : 41
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7889adc551fb943d344581d130caec92"
+  }, {
+    "name" : "example to-do app",
+    "children" : [ {
+      "name" : "displays two todo items by default",
+      "uid" : "a3a3b3b94f69d633",
+      "parentUid" : "f0e5a3486f211a49cdd3cca277fba252",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248795637,
+        "stop" : 1709248796389,
+        "duration" : 752
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "can add new todo items",
+      "uid" : "c390e7e20c303f30",
+      "parentUid" : "f0e5a3486f211a49cdd3cca277fba252",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248796399,
+        "stop" : 1709248797042,
+        "duration" : 643
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "can check off an item as completed",
+      "uid" : "344ec500b902e42a",
+      "parentUid" : "f0e5a3486f211a49cdd3cca277fba252",
+      "status" : "passed",
+      "time" : {
+        "start" : 1709248797052,
+        "stop" : 1709248797429,
+        "duration" : 377
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "with a checked task",
+      "children" : [ {
+        "name" : "can filter for uncompleted tasks",
+        "uid" : "298ff961f6fb17ee",
+        "parentUid" : "4b7d0793ff20cd0bf491c6e51d934f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709248797435,
+          "stop" : 1709248797951,
+          "duration" : 516
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "can filter for completed tasks",
+        "uid" : "ca060def3442b72c",
+        "parentUid" : "4b7d0793ff20cd0bf491c6e51d934f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709248797959,
+          "stop" : 1709248798435,
+          "duration" : 476
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "can delete all completed tasks",
+        "uid" : "424bd66fd9606dc5",
+        "parentUid" : "4b7d0793ff20cd0bf491c6e51d934f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1709248798446,
+          "stop" : 1709248798898,
+          "duration" : 452
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4b7d0793ff20cd0bf491c6e51d934f46"
+    } ],
+    "uid" : "f0e5a3486f211a49cdd3cca277fba252"
+  } ]
 }
