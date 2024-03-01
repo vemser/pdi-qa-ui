@@ -1,5 +1,5 @@
-export const SELECTOR = {
-  logout: {},
-  login: {},
-  cadastro: {}
+import { login } from "./login"
+
+export const selector = {
+  login,
 }
