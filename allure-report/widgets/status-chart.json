@@ -1,1 +1,121 @@
-[ ]
+[ {
+  "uid" : "7783cda69601da89",
+  "name" : "Test 01 - Verifique se é possível fazer logout corretamente",
+  "time" : {
+    "start" : 1709248782847,
+    "stop" : 1709248782911,
+    "duration" : 64
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "344ec500b902e42a",
+  "name" : "can check off an item as completed",
+  "time" : {
+    "start" : 1709248797052,
+    "stop" : 1709248797429,
+    "duration" : 377
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2640fec02b6d764",
+  "name" : "Test 02 - Verificar se é possível realizar um cadastro de usuário com informações inválidas",
+  "time" : {
+    "start" : 1709248767571,
+    "stop" : 1709248767608,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d51be09e3cb5e618",
+  "name" : "Test 02 - Verifique se a página redireciona corretamente após o login bem-sucedido",
+  "time" : {
+    "start" : 1709248775759,
+    "stop" : 1709248775821,
+    "duration" : 62
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca060def3442b72c",
+  "name" : "can filter for completed tasks",
+  "time" : {
+    "start" : 1709248797959,
+    "stop" : 1709248798435,
+    "duration" : 476
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "973a2dbfd7bf3b5b",
+  "name" : "Test 01 - Verifique se é possível fazer login com um usuário existente fornecendo o email e senha corretos",
+  "time" : {
+    "start" : 1709248775678,
+    "stop" : 1709248775749,
+    "duration" : 71
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c390e7e20c303f30",
+  "name" : "can add new todo items",
+  "time" : {
+    "start" : 1709248796399,
+    "stop" : 1709248797042,
+    "duration" : 643
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3a3b3b94f69d633",
+  "name" : "displays two todo items by default",
+  "time" : {
+    "start" : 1709248795637,
+    "stop" : 1709248796389,
+    "duration" : 752
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "424bd66fd9606dc5",
+  "name" : "can delete all completed tasks",
+  "time" : {
+    "start" : 1709248798446,
+    "stop" : 1709248798898,
+    "duration" : 452
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2bae5def5a72478f",
+  "name" : "Test 02 - Verifique se não é possível fazer logout",
+  "time" : {
+    "start" : 1709248782918,
+    "stop" : 1709248782959,
+    "duration" : 41
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "298ff961f6fb17ee",
+  "name" : "can filter for uncompleted tasks",
+  "time" : {
+    "start" : 1709248797435,
+    "stop" : 1709248797951,
+    "duration" : 516
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9724654fa94d6fb3",
+  "name" : "Test 01 - Verificar se é possível realizar um cadastro de usuário com informações válidas",
+  "time" : {
+    "start" : 1709248767493,
+    "stop" : 1709248767561,
+    "duration" : 68
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -6,8 +6,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       allureWriter(on, config)
       return config
-    },
+    }
+    //,
     // TODO: alterar baseURL para a aplicação
-    baseUrl: "http://localhost:8080"
+    //baseUrl: "http://localhost:8080"
   }
 })

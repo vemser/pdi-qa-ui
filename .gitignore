@@ -9,6 +9,10 @@ cypress/results/*
 cypress/reports/*
 cypress/screenshots/*
 cypress/videos/*
+allure-results
+allure-report
+
+
 
 ### Node ###
 # Logs
