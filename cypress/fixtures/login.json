@@ -1,6 +1,26 @@
 {
-  "loginValido": {
-    "email": "",
-    "senha": ""
+  "admin": {
+    "email": "admin.teste@dbccompany.com.br",
+    "senha": "Jvs9^@B809lP"
+  },
+  "gestor": {
+    "email": "gestor.teste@dbccompany.com.br",
+    "senha": "Jvs9^@B809lP"
+  },
+  "instrutor": {
+    "email": "instrutor.teste@dbccompany.com.br",
+    "senha": "Jvs9^@B809lP"
+  },
+  "aluno": {
+    "email": "aluno.teste@dbccompany.com.br",
+    "senha": "Jvs9^@B809lP"
+  },
+  "colaborador": {
+    "email": "colaborador.teste@dbccompany.com.br",
+    "senha": "Jvs9^@B809lP"
+  },
+  "gestao": {
+    "email": "gestao.teste@dbccompany.com.br",
+    "senha": "Jvs9^@B809lP"
   }
 }

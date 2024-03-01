@@ -1,8 +1,9 @@
 /* Atributos */
-const { SELECTOR } = require("./elements/selector")
-const {} = SELECTOR.login
+const { selector } = require("./elements/selector")
+const { email, senha, btnLogout } = selector.login
 
 /* Rotinas */
-Cypress.Commands.add("fazerLogin", (email, senha) => {})
+Cypress.Commands.add("fazerLogin", (email, senha) => {
+})
 
 Cypress.Commands.add("fazerLogout", () => {})

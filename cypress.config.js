@@ -2,13 +2,14 @@ const { defineConfig } = require("cypress")
 const allureWriter = require("@shelex/cypress-allure-plugin/writer")
 
 module.exports = defineConfig({
+
+  chromeWebSecurity: false,
+
   e2e: {
     setupNodeEvents(on, config) {
       allureWriter(on, config)
       return config
-    }
-    //,
-    // TODO: alterar baseURL para a aplicação
-    //baseUrl: "http://localhost:8080"
+    },
+    baseUrl: "https://pdi-front.vercel.app/"
   }
 })

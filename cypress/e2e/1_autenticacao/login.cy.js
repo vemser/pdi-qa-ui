@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
 describe("Login", () => {
-  // beforeEach(() => {
-  //   cy.visit("/")
-  // })
+  beforeEach(() => {
+    cy.visit("/")
+  })
 
   it("Test 01 - Verifique se é possível fazer login com um usuário existente fornecendo o email e senha corretos", () => {})
 
