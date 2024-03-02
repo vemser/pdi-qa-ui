@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "e2e": "cypress run --env allure=true",
-    "report:allure": "allure generate allure-results -o allure-report",
+    "report:allure": "allure generate allure-results -o --clean allure-report",
     "test:allure": "npm run e2e && npm run report:allure"
   },
   "keywords": [],
