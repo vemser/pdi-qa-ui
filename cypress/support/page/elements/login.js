@@ -1,5 +1,5 @@
 export const login = {
-  email: "",
-  senha: "",
-  btnLogout: ""
+  email: "#outlined-email",
+  senha: "#outlined-adornment-password",
+  btnLogin: "#root > div > div > form > button"
 }
