@@ -1,29 +1,25 @@
 /* Atributos */
 const { selector } = require("./elements/selector")
-const { emailLogin, senhaLogin, btnLogin, textTelaLogin } = selector.login
+const { email, senha, btnLogin, textTelaLogin } = selector.login
 const { btnLogout, btnLogoutResponsivo, btnResponsivo } = selector.logout
 
 /* Rotinas */
 
-Cypress.Commands.add("fazerLogoutResponsivo", usuario => {
-    cy.fixture("login").then(loginData => {
-        const { email, senha } = loginData[usuario]
+Cypress.Commands.add("fazerLogoutResponsivo", (emailLogin, senhaLogin)=> {
         cy.get(textTelaLogin).contains("Login")
-        cy.get(emailLogin).type(email)
-        cy.get(senhaLogin).type(senha)
+        cy.get(email).type(emailLogin)
+        cy.get(senha).type(senhaLogin)
         cy.get(btnLogin).click()
         cy.get(btnResponsivo).click()
         cy.get(btnLogoutResponsivo).click()
     })
-})
 
-Cypress.Commands.add("fazerLogout", usuario => {
-    cy.fixture("login").then(loginData => {
-        const { email, senha } = loginData[usuario]
+
+Cypress.Commands.add("fazerLogout", (emailLogin, senhaLogin) => {
         cy.get(textTelaLogin).contains("Login")
-        cy.get(emailLogin).type(email)
-        cy.get(senhaLogin).type(senha)
+        cy.get(email).type(emailLogin)
+        cy.get(senha).type(senhaLogin)
         cy.get(btnLogin).click()
+        cy.wait(500)
         cy.get(btnLogout).click()
     })
-})
