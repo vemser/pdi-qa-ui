@@ -19,7 +19,8 @@ const {
   txtPrimeiroModuloSoftSkills,
   txtPrimeiraTaskHardSkills,
   txtDescricaoPrimeiraTask,
-  txtNotaPrimeiraTask
+  txtNotaPrimeiraTask,
+  btnGerarRelatorio
 } = selector.relatorio
 
 /* Rotinas */
@@ -76,4 +77,10 @@ Cypress.Commands.add("validarDropdown", () => {
   cy.get(txtPrimeiraTaskHardSkills).click()
   cy.get(txtDescricaoPrimeiraTask).contains("Aprendemos as tags semanticas e os conceitos básicos de HTML")
   cy.get(txtNotaPrimeiraTask).contains("40")
+})
+
+Cypress.Commands.add("selecionarBotaoGerarRelatorio", () => {
+ 
+  cy.get(btnGerarRelatorio).click()
+  //completar quando funcionalidade for implementada no front
 })
