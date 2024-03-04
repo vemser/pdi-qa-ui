@@ -1,7 +1,8 @@
 /* Atributos */
 const { selector } = require("./elements/selector")
-const { email, senha, btnLogin} = selector.login
-const { campoFiltro, btnLupa, resultadoBusca, semResultadoBusca, btnDetalhes, abaHardSkills, btnPag2, bntArrow } = selector.dashboard
+const { email, senha, btnLogin } = selector.login
+const { campoFiltro, btnLupa, resultadoBusca, semResultadoBusca, btnDetalhes, abaHardSkills, btnPag2, bntArrow } =
+  selector.dashboard
 import { nomeInvalido } from "../../utils/DataGenerator"
 
 /* Rotinas */

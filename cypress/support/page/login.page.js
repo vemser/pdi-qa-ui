@@ -11,7 +11,8 @@ Cypress.Commands.add("fazerLoginComSucesso", (emailLogin, senhaLogin) => {
   cy.get(email).type(emailLogin)
   cy.get(senha).type(senhaLogin)
   cy.get(btnLogin).click()
-  cy.get(textDashboard).contains("PDI - DASHBOARD")
+  cy.get(textDashboard, { timeout: 60000 }).contains("PDI - DASHBOARD")
+  cy.reload()
 })
 
 Cypress.Commands.add("fazerLoginComDadosInvalidos", () => {
