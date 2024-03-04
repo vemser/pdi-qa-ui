@@ -1,14 +1,12 @@
 /* Atributos */
 const { selector } = require("./elements/selector")
 const { email, senha, btnLogin } = selector.login
+const { campoFiltro, btnLupa, resultadoBusca, semResultadoBusca, btnDetalhes, abaHardSkills, btnPag2, bntArrow } =
+  selector.dashboard
 const {
-  txtTituloDashboard,
   txtNomePrimeiroDaLista,
   txtTrilhaPrimeiroDaLista,
   txtEmailPrimeiroDaLista,
-  btnDetalhesPrimeiroDaLista
-} = selector.dashboard
-const {
   txtTituloRelatorio,
   txtNomeRelatorio,
   txtTrilhaRelatorio,
@@ -24,26 +22,16 @@ const {
 } = selector.relatorio
 
 /* Rotinas */
-Cypress.Commands.add("fazerLogin", (txtEmail, txtSenha) => {
-  cy.get(email).type(txtEmail)
-  cy.get(senha).type(txtSenha)
-  cy.get(btnLogin).click()
-  cy.get(txtTituloDashboard).contains("PDI - DASHBOARD")
-})
 
 Cypress.Commands.add("validarDadosPrimeiroDaLista", () => {
   let nomeDashboard = cy.get(txtNomePrimeiroDaLista)
   let trilhaDashboard = cy.get(txtTrilhaPrimeiroDaLista)
   let emailDashboard = cy.get(txtEmailPrimeiroDaLista)
-  cy.get(btnDetalhesPrimeiroDaLista).click()
+  cy.get(btnDetalhes).click()
   cy.get(txtTituloRelatorio).contains("COLABORADOR")
   cy.get(txtNomeRelatorio).contains(nomeDashboard)
   cy.get(txtTrilhaRelatorio).contains(trilhaDashboard)
   cy.get(txtEmailRelatorio).contains(emailDashboard)
-})
-
-Cypress.Commands.add("navegarEtcEtc", () => {
-  cy.get(btnDetalhesPrimeiroDaLista).click()
 })
 
 Cypress.Commands.add("validarTrocarAba", () => {
