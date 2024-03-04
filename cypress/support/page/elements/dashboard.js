@@ -1,6 +1,6 @@
 export const dashboard = {
     campoFiltro: "#name",
-    btnLupa: "#root > main > section > section > div > div > div.sc-bBkKde.evoTqN > div.sc-cyZbeP.iUDIHd > form > div > div > div > button",
+    btnLupa: "#root > main > section > section > div > div > div.sc-lnsjTu.kGApzi > div.sc-gjLLEI.lkRZbD > form > div > div > div > button",
     resultadoBusca: "#root > main > section > section > div > div > div.sc-bBkKde.evoTqN > div.MuiBox-root.css-8atqhb > div.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-tiyhb4 > div > div.MuiDataGrid-virtualScroller.css-1pzb349 > div > div > div > div:nth-child(1) > div",
     semResultadoBusca: "#root > main > section > section > div > div > div.sc-bBkKde.evoTqN > div.MuiBox-root.css-8atqhb > div.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-tiyhb4 > div > div.MuiDataGrid-virtualScroller.css-1pzb349 > div.MuiDataGrid-overlayWrapper.css-1tmxkya > div > div",
     btnDetalhes: "#root > main > section > section > div > div > div.sc-bBkKde.evoTqN > div.MuiBox-root.css-8atqhb > div.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-tiyhb4 > div > div.MuiDataGrid-virtualScroller.css-1pzb349 > div > div > div > div:nth-child(6) > button",

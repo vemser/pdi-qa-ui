@@ -56,7 +56,7 @@ Cypress.Commands.add("validarBtnPaginacaoSeta", () => {
   cy.get(resultadoBusca).invoke("text").as("Estagiario1")
   cy.get(bntArrow).click()
   cy.get(resultadoBusca).invoke("text").as("Estagiario2")
-  expect(Estagiario1).not.to.equal(Estagiario2)
+  expect(this.Estagiario1).not.to.equal(this.Estagiario2)
 })
 
 Cypress.Commands.add("validarMenuLateralAcompanhamentos", () => {
