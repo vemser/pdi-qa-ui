@@ -1,7 +1,11 @@
 import { login } from "./login"
 import { logout } from "./logout"
+import { configuracoes} from "./configuracoes"
+import { dashboard } from "./dashboard"
 
 export const selector = {
   login,
-  logout
+  logout,
+  configuracoes,
+  dashboard
 }

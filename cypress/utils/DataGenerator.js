@@ -7,6 +7,8 @@ export const senhaDinamica = faker.internet.password(8)
 
 export const emailInvalido = faker.internet.email()
 
+export const nomeInvalido = faker.person.fullName()
+
 export const ListaEmailsInvalidos = [
   "userexample.com",
   "userexample@dominio@dominio.com",
