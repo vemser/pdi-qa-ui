@@ -10,7 +10,10 @@ describe("Login",{viewportHeight: 1080, viewportWidth: 1920}, () => {
   it("Test 01 - Validar login com dados válidos", () => {
     cy.fazerLoginComSucesso(loginData.instrutor.email, loginData.instrutor.senha)
   })
-
+  /*COMO USAR AS VARIAVEIS DE AMBIENTE
+  it("Test 01 - Validar login com dados válidos", () => {
+    cy.fazerLoginComSucesso(Cypress.env(`ADMIN_EMAIL`), Cypress.env(`ADMIN_SENHA`))
+  })*/
   it("Test 02 - Validar login com dados inválidos", () => {
     cy.fazerLoginComDadosInvalidos()
   })
