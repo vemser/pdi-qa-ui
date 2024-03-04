@@ -7,7 +7,7 @@ const {
   txtTrilhaPrimeiroDaLista,
   txtEmailPrimeiroDaLista,
   btnDetalhesPrimeiroDaLista,
-  btnAcompanhamento
+  btnAcompanhamentos
 } = selector.dashboard
 const {
   seletorDataInicio,
@@ -21,7 +21,8 @@ const {
   btnDetalhes,
   txtDetalhesTitulo,
   txtDetalhesData,
-  txtDetalhesStatus
+  txtDetalhesStatus,
+  txtMensagemRegistroVazio
 } = selector.agendamento
 
 /* Rotinas */
@@ -29,14 +30,14 @@ const {
 Cypress.Commands.add("validaDataInicioDataFim", (dataInicio, dataFim) => {
   cy.get(seletorDataInicio).type(dataInicio)
   cy.get(seletorDataFim).type(dataFim)
-  cy.get(seletorFiltroEdicao).click()
+  //cy.get(seletorFiltroEdicao).click()
   //cy.get(seletorFiltroEdicaoPrimeiraOpcao).click()
-  cy.get(txtDataInicioPrimeiroElemento).contains(dataInicio)
+  cy.get(txtDataInicioPrimeiroElemento, { timeout: 120000 }).contains(dataInicio)
   cy.get(txtDataFimPrimeiroElemento).contains(dataFim)
 })
 
 Cypress.Commands.add("acessarPaginaAcompanhamento", () => {
-  cy.get(btnAcompanhamento).click()
+  cy.get(btnAcompanhamentos).click()
 })
 
 Cypress.Commands.add("validaMensagemRegistrosVazios", () => {

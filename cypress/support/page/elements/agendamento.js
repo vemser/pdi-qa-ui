@@ -1,8 +1,8 @@
 export const agendamento = {
-  seletorDataInicio: "#:r0:",
-  seletorDataFim: "#:r1:",
+  seletorDataInicio: 'input[name="dateStart"]',
+  seletorDataFim: 'input[name="dateEnd"]',
   seletorFiltroEdicao: "#demo-simple-select",
-  seletorFiltroEdicaoPrimeiraOpcao: "#:r2: > li:nth-child(1)",
+  seletorFiltroEdicaoPrimeiraOpcao: 'li[data-qa="select-option-vemser-12"]',
   txtTituloPrimeiroElemento:
     "#root > main > section > section > main > div > div > div.MuiDataGrid-root.MuiDataGrid-autoHeight.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-1lo9hqi > div > div.MuiDataGrid-virtualScroller.css-1pzb349 > div > div > div:nth-child(1) > div:nth-child(2) > div",
   txtDataInicioPrimeiroElemento:
