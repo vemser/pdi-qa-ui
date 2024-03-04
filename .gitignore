@@ -11,7 +11,8 @@ cypress/screenshots/*
 cypress/videos/*
 allure-results
 allure-report
-fixtures/*
+cypress/fixtures/*
+cypress/fixtures/login.json
 
 ### Node ###
 # Logs
