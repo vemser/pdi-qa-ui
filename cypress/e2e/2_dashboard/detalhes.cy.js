@@ -40,7 +40,7 @@ describe("Dashboard - Visualizar Detalhes Do Usuário", {viewportHeight: 1080, v
     //Falta um plano de ação presente no Front-End
   })
 
-  it("Test 05 -  Validar se o plano de ação está presente nos detalhes de usuário", () => {
+  it("Test 06 -  Validar se o feedback técnico está presente nos detalhes de usuário", () => {
     cy.fazerlogin(loginData.instrutor.email, loginData.instrutor.senha)
     cy.FiltroBemSucedido()
     cy.validarHistoricoEstagiario()
