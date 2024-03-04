@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "e2e": "cypress run --env allure=true",
-    "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "report:allure": "allure generate allure-results -o --clean allure-report",
     "test:allure": "npm run e2e && npm run report:allure"
   },
   "keywords": [],
@@ -17,6 +17,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "@faker-js/faker": "^8.4.1",
     "@shelex/cypress-allure-plugin": "^2.40.1",
     "cypress": "^12.14.0"
