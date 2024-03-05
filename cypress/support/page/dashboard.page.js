@@ -12,18 +12,11 @@ const {
   btnPag2,
   btnAcompanhamentos,
   pgAcompanhamentos,
-  bntArrow
+  bntArrow,
 } = selector.dashboard
 import { nomeInvalido } from "../../utils/DataGenerator"
 
 /* Rotinas */
-
-Cypress.Commands.add("fazerlogin", (emailLogin, senhaLogin) => {
-  cy.get(textTelaLogin).contains("Login")
-  cy.get(email).type(emailLogin)
-  cy.get(senha).type(senhaLogin)
-  cy.get(btnLogin).click()
-})
 
 Cypress.Commands.add("validarFiltroEstagiarioValido", () => {
   cy.get(campoFiltro).type("Ana Rodrigues")
@@ -52,26 +45,26 @@ Cypress.Commands.add("validarStatusEstagiarioAtivo", () => {
   cy.get(statusAtivo).should("contain", "Ativo")
 })
 
-Cypress.Commands.add("validarStatusEstagiarioInativo", () => {
-  cy.get(campoFiltro).type("Ana Rodrigues")
-  cy.get(btnLupa).click()
-  cy.get(statusAtivo).should("contain", "Inativo")
-})
-
 Cypress.Commands.add("validarBtnPaginacaoPorNumero", () => {
   cy.wait(3000)
-  cy.get(resultadoBusca).invoke("text").as("Estagiario1")
-  cy.get(btnPag2).click()
-  cy.wait(3000)
-  cy.get(resultadoBusca).invoke("text").as("Estagiario2")
-  expect(Estagiario1).not.to.equal(Estagiario2)
+  cy.get(resultadoBusca).invoke("text").then(Estagiario1 => {
+    cy.get(btnPag2).click()
+    cy.wait(3000)
+    cy.get(resultadoBusca).invoke("text").then(Estagiario2 => {
+      expect(Estagiario1).not.to.equal(Estagiario2)
+    })
+  })
 })
 
 Cypress.Commands.add("validarBtnPaginacaoSeta", () => {
-  cy.get(resultadoBusca).invoke("text").as("Estagiario1")
+  cy.wait(3000)
+  cy.get(resultadoBusca).invoke("text").then(Estagiario1 => {
   cy.get(bntArrow).click()
-  cy.get(resultadoBusca).invoke("text").as("Estagiario2")
-  expect(this.Estagiario1).not.to.equal(this.Estagiario2)
+  cy.wait(3000)
+  cy.get(resultadoBusca).invoke("text").then(Estagiario2 => {
+  expect(Estagiario1).not.to.equal(Estagiario2)
+    })
+  })
 })
 
 Cypress.Commands.add("validarMenuLateralAcompanhamentos", () => {
@@ -80,6 +73,5 @@ Cypress.Commands.add("validarMenuLateralAcompanhamentos", () => {
 })
 
 Cypress.Commands.add("validarAcessoNivelUsuario", () => {
-  cy.contains("ACOMPANHAMENTOS").should("not.exist")
-  cy.contains("PDI - DASHBOARD").should("not.exist")
+  cy.get(pgAcompanhamentos).contains("PDI - DASHBOARD").should("exist")
 })

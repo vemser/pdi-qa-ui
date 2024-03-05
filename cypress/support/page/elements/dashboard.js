@@ -10,9 +10,10 @@ export const dashboard = {
   statusAtivo:
     "#root > main > section > section > div > div > div.sc-cyZbeP.YKTyr > div.MuiBox-root.css-8atqhb > div.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-l994j > div > div.MuiDataGrid-virtualScroller.css-1pzb349 > div > div > div > div:nth-child(5) > div > span",
   btnPag2:
-    "#root > main > section > section > div > div > div.sc-bBkKde.evoTqN > div.MuiBox-root.css-8atqhb > div.sc-lnsjTu.gscKCw > nav > ul > li:nth-child(3) > button",
+  "#root > main > section > section > div > div > div.sc-cyZbeP.YKTyr > div.MuiBox-root.css-8atqhb > div.sc-gjLLEI.gkJpkU > nav > ul > li:nth-child(3) > button",
   bntArrow:
-    "#root > main > section > section > div > div > div.sc-bBkKde.evoTqN > div.MuiBox-root.css-8atqhb > div.sc-lnsjTu.gscKCw > nav > ul > li:nth-child(5) > button > svg",
+  "#root > main > section > section > div > div > div.sc-cyZbeP.YKTyr > div.MuiBox-root.css-8atqhb > div.sc-gjLLEI.gkJpkU > nav > ul > li:nth-child(5) > button > svg",
   btnAcompanhamentos: 'div[data-qa="button-push-to-appointments"]',
   pgAcompanhamentos: 'h1[data-qa="page-title"]'
+
 }

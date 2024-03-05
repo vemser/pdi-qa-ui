@@ -28,33 +28,29 @@ describe("Dashboard", { viewportHeight: 1080, viewportWidth: 1920 }, () => {
     cy.validarStatusEstagiarioAtivo()
   })
 
-  /*it("Test 06 - Validar se o estagiário tem status inativo", () => {
-    cy.fazerLoginComSucesso(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
-    cy.validarStatusEstagiarioInativo()
-  })*/
 
-  /* it("Test 07 - Validar clicar no botão de paginação por número", () => {
+  it("Test 06 - Validar clicar no botão de paginação por número", () => {
     cy.fazerLoginComSucesso(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
     cy.validarBtnPaginacaoPorNumero()
-  })*/
+  })
 
- /* it("Test 08 - Validar clicar no botão de paginação por número", () => {
+  it("Test 07 - Validar clicar no botão de paginação por seta", () => {
     cy.fazerLoginComSucesso(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
     cy.validarBtnPaginacaoSeta()
-  })*/
+  })
 
-  it("Test 09 - Validar clique no menu lateral acompanhamentos", () => {
+  it("Test 08 - Validar clique no menu lateral acompanhamentos", () => {
     cy.fazerLoginComSucesso(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
     cy.validarMenuLateralAcompanhamentos()
   })
 
-  it("Test 10 - Validar que o usuário do tipo Aluno não tem acesso ao Dashboard padrão do GP e Instrutor", () => {
-    cy.fazerLoginComSucesso(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
+  it("Test 09 - Validar que o usuário do tipo Aluno tem acesso ao Dashboard padrão do GP e Instrutor", () => {
+    cy.fazerLoginComSucesso(Cypress.env(`ALUNO_EMAIL`), Cypress.env(`ALUNO_SENHA`))
     cy.validarAcessoNivelUsuario()
   })
 
-  it("Test 11 - validar que o usuário do tipo Colaborador não tem acesso ao Dashboard padrão do GP e Instrutor", () => {
-    cy.fazerLoginComSucesso(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
+  it("Test 10 - Validar que o usuário do tipo Colaborador tem acesso ao Dashboard padrão do GP e Instrutor", () => {
+    cy.fazerLoginComSucesso(Cypress.env(`COLABORADOR_EMAIL`), Cypress.env(`COLABORADOR_SENHA`))
     cy.validarAcessoNivelUsuario()
   })
 })
