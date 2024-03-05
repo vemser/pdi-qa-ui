@@ -20,7 +20,7 @@ describe("Dashboard - Visualizar Detalhes Do Usuário", { viewportHeight: 1080, 
     cy.validarModulos()
   })
 
-  it("Test 03 - Validar se o feedback comportamental está presente nos detalhes de usuário", () => {
+  it("Test 03 - Validar se o feedback de Soft Skills está presente nos detalhes de usuário", () => {
     cy.fazerlogin(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
     cy.reload()
     cy.FiltroBemSucedido()
@@ -28,16 +28,20 @@ describe("Dashboard - Visualizar Detalhes Do Usuário", { viewportHeight: 1080, 
     cy.validarSoftSkills()
   })
 
-  it("Test 04 -  Validar se o plano de ação está presente nos detalhes de usuário", () => {
+  it("Test 04 -  Validar se o feedback técnico está presente nos detalhes de usuário", () => {
     cy.fazerlogin(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
     cy.reload()
     cy.FiltroBemSucedido()
     cy.validarHistoricoEstagiario()
+    cy.validarModulos()
+    cy.validarFeedbackTecnico()
   })
 
-  it("Test 05 -  Validar se o feedback técnico está presente nos detalhes de usuário", () => {
+  it("Test 05 - Validar se o feedback comportamental time GP está presente nos detalhes de usuário", () => {
     cy.fazerlogin(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
+    cy.reload()
     cy.FiltroBemSucedido()
     cy.validarHistoricoEstagiario()
+    cy.validarFeedbackComportamental()
   })
 })
