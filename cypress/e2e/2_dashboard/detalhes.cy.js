@@ -37,7 +37,7 @@ describe("Dashboard - Visualizar Detalhes Do Usuário", { viewportHeight: 1080, 
     cy.validarFeedbackTecnico()
   })
 
-  it.only("Test 05 - Validar se o feedback comportamental time GP está presente nos detalhes de usuário", () => {
+  it("Test 05 - Validar se o feedback comportamental time GP está presente nos detalhes de usuário", () => {
     cy.fazerlogin(Cypress.env(`INSTRUTOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
     cy.reload()
     cy.FiltroBemSucedido()
