@@ -11,7 +11,7 @@ Cypress.Commands.add("fazerLogoutResponsivo", (emailLogin, senhaLogin)=> {
         cy.get(senha).type(senhaLogin)
         cy.get(btnLogin).click()
         cy.get(btnResponsivo).click()
-        cy.get(btnLogoutResponsivo).click()
+        cy.get(btnLogout).click()
     })
 
 

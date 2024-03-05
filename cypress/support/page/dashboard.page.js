@@ -1,8 +1,19 @@
 /* Atributos */
 const { selector } = require("./elements/selector")
 const { email, senha, btnLogin } = selector.login
-const { campoFiltro, btnLupa, resultadoBusca, semResultadoBusca, btnDetalhes, abaHardSkills, btnPag2, bntArrow } =
-  selector.dashboard
+const {
+  campoFiltro,
+  btnLupa,
+  resultadoBusca,
+  semResultadoBusca,
+  btnDetalhes,
+  statusAtivo,
+  abaHardSkills,
+  btnPag2,
+  btnAcompanhamentos,
+  pgAcompanhamentos,
+  bntArrow
+} = selector.dashboard
 import { nomeInvalido } from "../../utils/DataGenerator"
 
 /* Rotinas */
@@ -17,18 +28,20 @@ Cypress.Commands.add("fazerlogin", (emailLogin, senhaLogin) => {
 Cypress.Commands.add("validarFiltroEstagiarioValido", () => {
   cy.get(campoFiltro).type("Ana Rodrigues")
   cy.get(btnLupa).click()
-  cy.get(resultadoBusca).should("contain", "Ana Rodrigues")
+  cy.wait(3000)
+  cy.get(resultadoBusca).first().should("contain", "Ana Rodrigues")
 })
 
 Cypress.Commands.add("validarFiltroEstagiarioInvalido", () => {
   cy.get(campoFiltro).type(nomeInvalido)
   cy.get(btnLupa).click()
-  cy.get(semResultadoBusca).should("contain", "Nenhum registro encontrado")
+  cy.get(semResultadoBusca).contains("Nenhum registro encontrado")
 })
 
 Cypress.Commands.add("validarBotaoDetalhes", () => {
   cy.get(campoFiltro).type("Ana Rodrigues")
   cy.get(btnLupa).click()
+  cy.wait(3000)
   cy.get(btnDetalhes).click()
   cy.get(abaHardSkills).should("contain", "Hard Skills")
 })
@@ -40,14 +53,16 @@ Cypress.Commands.add("validarStatusEstagiarioAtivo", () => {
 })
 
 Cypress.Commands.add("validarStatusEstagiarioInativo", () => {
-  cy.get(campoFiltro).type("Ana Rodrigues Inativa")
+  cy.get(campoFiltro).type("Ana Rodrigues")
   cy.get(btnLupa).click()
   cy.get(statusAtivo).should("contain", "Inativo")
 })
 
 Cypress.Commands.add("validarBtnPaginacaoPorNumero", () => {
+  cy.wait(3000)
   cy.get(resultadoBusca).invoke("text").as("Estagiario1")
   cy.get(btnPag2).click()
+  cy.wait(3000)
   cy.get(resultadoBusca).invoke("text").as("Estagiario2")
   expect(Estagiario1).not.to.equal(Estagiario2)
 })
