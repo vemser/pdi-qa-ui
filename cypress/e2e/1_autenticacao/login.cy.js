@@ -5,8 +5,8 @@ describe("Login", { viewportHeight: 1080, viewportWidth: 1920 }, () => {
     cy.visit("/")
   })
 
-  it.only("Test 01 - Validar login com dados válidos", () => {
-    cy.fazerLoginComSucesso(Cypress.env(`COLABORADOR_EMAIL`), Cypress.env(`INSTRUTOR_SENHA`))
+  it("Test 01 - Validar login com dados válidos", () => {
+    cy.fazerLoginComSucesso(Cypress.env(`ADMIN_EMAIL`), Cypress.env(`ADMIN_SENHA`))
   })
   it("Test 02 - Validar login com dados inválidos", () => {
     cy.fazerLoginComDadosInvalidos()
@@ -29,6 +29,6 @@ describe("Login", { viewportHeight: 1080, viewportWidth: 1920 }, () => {
   })
 
   it("Test 07 - Validar login com campo senha em formato invalido", () => {
-    cy.fazerLoginComSenhaEmFormatoInvalido(Cypress.env(`INSTRUTOR_EMAIL`), "123456")
+    cy.fazerLoginComSenhaEmFormatoInvalido(Cypress.env(`ADMIN_EMAIL`), "123456")
   })
 })

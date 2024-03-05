@@ -34,7 +34,7 @@ Cypress.Commands.add("fazerLoginComEmailInvalido", () => {
   cy.get(email).type(ListaEmailsInvalidos[Math.floor(Math.random() * ListaEmailsInvalidos.length)])
   cy.get(senha).type(senhaDinamica)
   cy.get(btnLogin).click()
-  cy.get(textEmailInvalido).contains("Formato de email inválido")
+  cy.get(textAlert).contains("Verifique se seus dados estão corretos")
 })
 
 Cypress.Commands.add("fazerLoginSenhaInvalida", emailLogin => {
