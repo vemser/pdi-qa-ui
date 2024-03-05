@@ -25,5 +25,9 @@ export const detalhes = {
     "#mui-p-87670-P-2 > div.sc-ppzwM.hlZSRR > ul > li:nth-child(6) > div > div.MuiListItemText-root.css-1tsvksn > span > div > h2",
   softSkillFeedbackComportamentalTimeGp:
     "#mui-p-87670-P-2 > div.sc-ppzwM.hlZSRR > ul > li:nth-child(7) > div > div.MuiListItemText-root.css-1tsvksn > span > div > h2",
-  abaSoftSkills: 'button[data-qa="botao-soft-skills"]'
+  abaSoftSkills: 'button[data-qa="botao-soft-skills"]',
+  dropdow:':nth-child(1) > [data-qa="dropdown-modulo"] > .MuiListItemText-root > .MuiTypography-root > div > [data-qa="nome-modulo"',
+  feedbackTecnico:'[data-qa="dropdown-feedback-modulo"] > .MuiAccordionSummary-content',
+  feedbackComportamental:':nth-child(7) > .MuiButtonBase-root > [data-qa="dropdown-feedback-gp"] > .MuiTypography-root > div > [data-qa="nome-feedback-gp"]',
+  btnFeedbackComportamental:':nth-child(7) > .MuiButtonBase-root > [data-qa="dropdown-feedback-gp"] > .MuiTypography-root > div > [data-qa="nome-feedback-gp"]'
 }

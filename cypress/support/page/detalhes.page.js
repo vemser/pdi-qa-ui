@@ -20,7 +20,11 @@ const {
   softSkillComprometimento,
   softSkillGestaoTempoeOrganizacao,
   softSkillFeedbackComportamentalTimeGp,
-  abaSoftSkills
+  abaSoftSkills,
+  dropdow,
+  feedbackTecnico,
+  feedbackComportamental,
+  btnFeedbackComportamental
 } = selector.detalhes
 
 import { nomeInvalido } from "../../utils/DataGenerator"
@@ -71,4 +75,15 @@ Cypress.Commands.add("validarFiltroEstagiarioInvalido", () => {
   cy.get(campoFiltro).type(nomeInvalido)
   cy.get(btnLupa).click()
   cy.get(semResultadoBusca).should("contain", "Nenhum registro encontrado")
+})
+
+Cypress.Commands.add("validarFeedbackTecnico", () => {
+  cy.get(dropdow).click()
+  cy.get(feedbackTecnico, { timeout: 10000 }).first().should("contain", "Feedback técnico")
+})
+
+Cypress.Commands.add("validarFeedbackComportamental", () => {
+  cy.get(abaSoftSkills).click()
+  cy.get(feedbackComportamental, { timeout: 10000 }).first().should("contain", "Feedback comportamental")
+  cy.get(btnFeedbackComportamental).click()
 })
