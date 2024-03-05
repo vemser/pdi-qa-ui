@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-import loginData from "../../fixtures/login.json"
 
 describe("Agendamento", { viewportHeight: 1080, viewportWidth: 1920 }, () => {
   beforeEach(() => {
