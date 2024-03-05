@@ -2,9 +2,56 @@
 
 # PDI - Grupo 06 - Automações UI
 
-Neste repositório, reunimos informações sobre cenários de testes realizados no trabalho final do programa Vem Ser - Edição 13. O documento contendo informações sobre o plano de testes [aqui](https://docs.google.com/document/d/1uwmhRKAB8eZPC94iriWBEiTsw3HQwanRt3S1T63F83s/edit?usp=sharing).
+![Cypress](https://img.shields.io/badge/Cypress-Logo?style=flat-square&color=%2369D3A7)
+![Allure-Report](https://img.shields.io/badge/Allure_Report-logo?style=flat-square&color=%23E5de00)
+![Jenkins](https://img.shields.io/badge/Jenkins-Logo?style=flat-square&color=%23c61a09)
+![Dotenv](https://img.shields.io/badge/Dotenv-logo?style=flat-square&color=%2365ADF1)
+![Faker](https://img.shields.io/badge/Faker-logo?style=flat-square&color=%2341454A)
+![Javascript](https://img.shields.io/badge/javascript-logo?style=flat-square&color=%23F7DF1E)
 
-<br/>
+
+No seguinte repositório, você encontrará a implementação de testes de interface de usuário do projeto PDI. Este projeto visa centralizar informações e histórico de evolução para serem compartilhados com os clientes da DBC, proporcionando assim um modelo mais preciso e descritivo do estagiário e sua trajetória de evolução. 
+## Como rodar o projeto
+
+1 - Clone o repositorio
+
+```ssh
+git clone https://github.com/vemser/pdi-qa-ui.git
+```
+2 - Entre na pasta criada
+
+```ssh
+cd pdi-qa-ui
+```
+3 - Copie o arquivo .env.example para .env
+```ssh
+copy .env.example .env
+```
+
+Por motivos de segurança de dados sensiveis, os dados de registro devem ser passado manualmente.  
+4 - Instale depedências npm
+
+```ssh
+npm i
+```
+5 - Instale o cypress na versão do projeto
+
+```ssh
+npm install cypress@12.14.0 --save-dev
+```
+
+6 - Rode o comando para os testes
+
+```ssh
+npm run test:allure
+```
+
+## Links de documentação
+
+- [Documentação do Projeto](https://docs.google.com/document/d/1JbD9QE9wydjz9Um56CRPOwvF_eynXlK5pjudNpPTfe0/edit?usp=sharing)
+- [Plano de Testes](https://docs.google.com/document/d/1Egbc41QN5k-EP1opllAnJ8QMLGkxEileNWfX0vs50-o/edit?usp=sharing)
+- [Cenario de Testes](https://docs.google.com/document/d/1DUtSViUbR1GF9dwR3aufcfRg7i1MkpqXnzVUOy5yHrQ/edit?usp=sharing)
+- [Estórias de usuários](https://docs.google.com/document/d/1VYv1Bo8UmuYAN4OSunE8Pl5dQIh4Ih-E1crcTPsBw48/edit?usp=sharing)
 
 ## Integrantes
 
@@ -45,7 +92,14 @@ Neste repositório, reunimos informações sobre cenários de testes realizados 
     </tr>
 </table>
 
-<br/>
+## Cobertura de testes
+
+- Login de usuário
+- Configurações de usuário
+- Painel do Usuario
+- Pagina de detalhes de estagiario
+- Relatorio
+- Agendamento
 
 ## Licença
 
