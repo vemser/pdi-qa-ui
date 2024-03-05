@@ -1,23 +1,16 @@
 export const relatorio = {
-  txtNomePrimeiroDaLista: '<div class="MuiDataGrid-cellContent" title="Aluno teste" role="presentation">Aluno teste</div>',
-    txtTrilhaPrimeiroDaLista:'<div class="MuiDataGrid-cellContent" title="Frontend" role="presentation">Frontend</div>',
+  txtNomePrimeiroDaLista: "Aluno teste",
+  txtTrilhaPrimeiroDaLista: "Frontend",
   txtTituloRelatorio: 'h1[data-qa="page-title"]',
   //Conteúdo esperado: "COLABORADOR"
-  txtNomeRelatorio:
-    'h1[data-qa="nome-estagiario"]',
-  txtTrilhaRelatorio:
-  'p[data-qa="trilha-estagiario"]',
+  txtNomeRelatorio: 'h1[data-qa="nome-estagiario"]',
+  txtTrilhaRelatorio: 'p[data-qa="trilha-estagiario"]',
   btnAbaHardSkills: 'button[data-qa="botao-hard-skills"]',
   btnAbaSoftSkills: 'button[data-qa="botao-soft-skills"]',
-  txtPrimeiroModuloHardSkills:
-    "#mui-p-72596-P-1 > ul > li:nth-child(1) > div > div.MuiListItemText-root.css-1tsvksn > span > div > h2",
-  txtPrimeiroModuloSoftSkills:
-    "#mui-p-72596-P-2 > div.sc-iLXxbI.dGfsWP > ul > li:nth-child(1) > div > div.MuiListItemText-root.css-1tsvksn > span > div > h2",
-  txtPrimeiraTaskHardSkills:
-    "#panel1-header > div.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters.css-17o5nyn > div > h3",
-  txtDescricaoPrimeiraTask: "#panel1-content > div > li > p:nth-child(2)",
-  txtNotaPrimeiraTask: "#panel1-content > div > li > p:nth-child(4)",
-  btnGerarRelatorio:
-    "#mui-p-24361-P-1 > div.sc-gUjWJS.eSfOpk.MuiBox-root.css-0 > div > div > div:nth-child(1) > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.css-1hw9j7s"
-  //puxar elemento por aria-selector "Baixar relatório com as informações do colaborador"
+  txtPrimeiroModuloHardSkills: 'h2[data-qa="nome-modulo"]',
+  txtPrimeiroModuloSoftSkills: 'h2[data-qa="nome-feedback-gp"]',
+  txtPrimeiraTaskHardSkills: 'h3[data-qa="nome-task"]',
+  txtDescricaoPrimeiraTask: 'p[data-qa="descricao-da-task"]',
+  txtNotaPrimeiraTask: 'p[data-qa="nota-da-task"]',
+  btnGerarRelatorio: 'button[aria-label="Baixar relatório com as informações do colaborador"]'
 }

@@ -25,19 +25,16 @@ const {
 
 Cypress.Commands.add("validarDadosPrimeiroDaLista", () => {
   cy.wait(9000)
-  let nomeDashboard = cy.get(txtNomePrimeiroDaLista)
-  let trilhaDashboard = cy.get(txtTrilhaPrimeiroDaLista)
-  cy.get(btnDetalhes).first().click()
-  console.log(nomeDashboard)
-  console.log(trilhaDashboard)
-  cy.get(txtTituloRelatorio, {timeout:15000}).contains("COLABORADOR")
-  cy.get(txtNomeRelatorio, {timeout:15000}).contains(nomeDashboard)
+  let nomeDashboard = txtNomePrimeiroDaLista
+  let trilhaDashboard = txtTrilhaPrimeiroDaLista
+  cy.get(btnDetalhes, { timeout: 15000 }).first().click()
+  cy.get(txtTituloRelatorio, { timeout: 15000 }).contains("COLABORADOR")
+  cy.get(txtNomeRelatorio, { timeout: 15000 }).contains(nomeDashboard)
   cy.get(txtTrilhaRelatorio).contains(trilhaDashboard)
 })
 
 Cypress.Commands.add("navegarDetalhesPrimeiroDaLista", () => {
   cy.get(btnDetalhes).first().click()
-
 })
 
 Cypress.Commands.add("validarTrocarAba", () => {
@@ -67,14 +64,19 @@ Cypress.Commands.add("validarIndicadorAbaAtiva", () => {
 Cypress.Commands.add("validarDropdown", () => {
   cy.get(txtTituloRelatorio).contains("COLABORADOR")
   cy.get(btnAbaHardSkills).contains("Hard Skills")
-  cy.get(txtPrimeiroModuloHardSkills).click()
-  cy.get(txtPrimeiraTaskHardSkills).click()
-  cy.get(txtDescricaoPrimeiraTask).contains("Aprendemos as tags semanticas e os conceitos básicos de HTML")
+  cy.get(txtPrimeiroModuloHardSkills, { timeout: 15000 }).first().click()
+  cy.get(txtPrimeiraTaskHardSkills).first().click()
+  cy.get(txtDescricaoPrimeiraTask).contains(
+    "Nesta tarefa, os alunos aprenderam sobre a estrutura básica de um documento HTML"
+  )
   cy.get(txtNotaPrimeiraTask).contains("40")
 })
 
 Cypress.Commands.add("selecionarBotaoGerarRelatorio", () => {
-  
-  cy.get(btnGerarRelatorio).click()
-  //completar quando funcionalidade for implementada no front
+  cy.get(btnGerarRelatorio, { timeout: 15000 }).click()
+})
+
+Cypress.Commands.add("validarDownloadDoRelatorio", () => {
+  const downloadsFolder = Cypress.config("downloadsFolder")
+  cy.readFile(relatorio.pdf)
 })
